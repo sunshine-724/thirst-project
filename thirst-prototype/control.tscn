@@ -1,0 +1,194 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbaj1apbpbta5"]
+
+[ext_resource type="Texture2D" uid="uid://tvpxs14v6wgu" path="res://assets/craftpix-net-546708-free-desert-oasis-pixel-art-background-pack/PNG/background 1/background 1.png" id="1_kbped"]
+[ext_resource type="Texture2D" uid="uid://omesy8336746" path="res://assets/Game-icons.net/cookie.png" id="2_fj5cn"]
+[ext_resource type="Texture2D" uid="uid://by6f65p4x6mep" path="res://assets/Game-icons.net/meat.png" id="3_iy58a"]
+[ext_resource type="Texture2D" uid="uid://hk1rc8gdyehd" path="res://assets/Game-icons.net/drop.png" id="4_6a6wx"]
+[ext_resource type="Texture2D" uid="uid://cc2vskpnn5t80" path="res://assets/Game-icons.net/hearts.png" id="5_sky72"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="background_image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_kbped")
+
+[node name="food_image" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.0
+offset_top = -224.0
+offset_right = -106.0
+offset_bottom = 126.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fj5cn")
+expand_mode = 1
+stretch_mode = 4
+
+[node name="food_name" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 14.0
+offset_top = 20.0
+offset_right = 454.0
+offset_bottom = 90.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 48
+text = "food_name"
+
+[node name="yes" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -476.0
+offset_top = -98.0
+offset_right = -76.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "食べる"
+metadata/_edit_lock_ = true
+
+[node name="no" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 74.0
+offset_top = -98.0
+offset_right = 474.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 64
+text = "食べない"
+metadata/_edit_lock_ = true
+
+[node name="Vbox_parameter_image" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 550.0
+offset_top = 100.0
+offset_right = 650.0
+offset_bottom = 450.0
+theme_override_constants/separation = 20
+
+[node name="stomach" type="TextureRect" parent="Vbox_parameter_image"]
+layout_mode = 2
+texture = ExtResource("3_iy58a")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="water" type="TextureRect" parent="Vbox_parameter_image"]
+layout_mode = 2
+texture = ExtResource("4_6a6wx")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="mental" type="TextureRect" parent="Vbox_parameter_image"]
+layout_mode = 2
+texture = ExtResource("5_sky72")
+expand_mode = 4
+stretch_mode = 4
+
+[node name="percentage" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1049.0
+offset_top = 16.0
+offset_right = 1134.0
+offset_bottom = 71.0
+theme_override_font_sizes/font_size = 40
+text = "00%"
+
+[node name="VBox_patameter" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 100.0
+offset_right = 843.0
+offset_bottom = 177.0
+theme_override_constants/separation = 20
+
+[node name="Label_stomach" type="Label" parent="VBox_patameter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 73
+text = "+00"
+
+[node name="Label_water" type="Label" parent="VBox_patameter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 73
+text = "+00"
+
+[node name="Label_mental" type="Label" parent="VBox_patameter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 73
+text = "+00"
+
+[node name="HBox_parameter_image" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 550.0
+offset_bottom = 80.0
+theme_override_constants/separation = 100
+
+[node name="H_stomach" type="TextureRect" parent="HBox_parameter_image"]
+layout_mode = 2
+texture = ExtResource("3_iy58a")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="H_water" type="TextureRect" parent="HBox_parameter_image"]
+layout_mode = 2
+texture = ExtResource("4_6a6wx")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="H_mental" type="TextureRect" parent="HBox_parameter_image"]
+layout_mode = 2
+texture = ExtResource("5_sky72")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="HBox_parameter" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 80.0
+offset_right = 550.0
+offset_bottom = 80.0
+theme_override_constants/separation = 110
+
+[node name="H_Label_stomach" type="Label" parent="HBox_parameter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "00"
+
+[node name="H_Label_water" type="Label" parent="HBox_parameter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "00"
+
+[node name="H_Label_mental" type="Label" parent="HBox_parameter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "00"
