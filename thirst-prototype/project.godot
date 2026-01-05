@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="thirst-prototype"
+config/name="thirst-game"
 run/main_scene="uid://dt8f3bfhtpwhb"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
@@ -18,3 +18,4 @@ config/icon="res://icon.svg"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
